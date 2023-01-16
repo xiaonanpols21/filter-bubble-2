@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Orbitron:900&display=swap");
 .index-body {
   display: -ms-grid;
   display: grid;
@@ -325,6 +326,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
 }
 
 .bar {
@@ -339,6 +341,160 @@
   height: 35px;
   border-radius: 5px;
   width: 100%;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.label {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+svg circle.node {
+  fill: #3b5998;
+  stroke: #1b3978;
+  stroke-width: 1.5px;
+}
+
+svg line.link {
+  stroke: #222;
+  stroke-opacity: .6;
+  stroke-width: 2px;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  width: 80px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #8fb3de;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #feae58;
+  background: #131930;
+  color: #c5fcc5;
+  color: #f9c690;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* style the input with a white outline */
+main .input {
+  margin: 1rem 0;
+}
+
+main .input select {
+  padding: 0.5rem 5rem;
+  padding-left: 0.25rem;
+  text-align: left;
+  background: none;
+  color: inherit;
+  border: 2px solid currentColor;
+  text-transform: uppercase;
+  line-height: 2;
+  font-family: inherit;
+}
+
+main .input select option {
+  background: #1a1a1a;
+  color: inherit;
+}
+
+/* cap the width of the wrapping container and horizontally center the element */
+main .output {
+  max-width: 750px;
+  width: 90vw;
+  margin: 1rem auto;
+}
+
+main .output svg {
+  width: 100%;
+  height: auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* absolute position the tooltip */
+#tooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  padding: 1rem 1.5rem;
+  line-height: 2;
+  background: #fff;
+  color: #222;
+  pointer-events: none;
+  max-width: 350px;
+  display: -ms-grid;
+  display: grid;
+  /* display the information in a grid
+    three columns, the first of which stretches to occupy the available space
+  */
+  -ms-grid-columns: 1fr auto auto;
+      grid-template-columns: 1fr auto auto;
+  grid-gap: 0.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tooltip .planet {
+  font-size: 1.25rem;
+}
+
+#tooltip .year,
+#tooltip .medium {
+  font-size: 0.9rem;
+}
+
+#tooltip .medium:before {
+  content: "|";
+}
+
+/* have the source spread to cover the entirety of the second row */
+#tooltip .source {
+  grid-column: span 3;
 }
 
 * {
