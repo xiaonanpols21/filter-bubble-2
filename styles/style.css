@@ -157,7 +157,7 @@
 }
 
 .like-dislike-sec ul li:last-of-type i {
-  background-color: #00f2ea;
+  background-color: #ff0050;
 }
 
 .like-dislike-sec > div i {
@@ -172,7 +172,7 @@
           justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: #ff0050;
+  background-color: #00f2ea;
   border-radius: 50%;
   color: white;
   font-size: 25px;
@@ -218,7 +218,7 @@
           justify-content: center;
   width: 70px;
   height: 70px;
-  background-color: #ff0050;
+  background-color: #00f2ea;
   border-radius: 50%;
   color: white;
   font-size: 35px;
@@ -245,7 +245,7 @@
 }
 
 .tiktok-vid label:last-of-type i {
-  background-color: #00f2ea;
+  background-color: #ff0050;
 }
 
 .tiktok-vid input {
