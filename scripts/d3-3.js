@@ -2,14 +2,30 @@ import '../styles/style.css'
 // import * as d3 from 'd3';
 import gsap from "gsap";
 
-/* globals d3 */
+// Bron: https://codepen.io/xiao-nan-pols/pen/xxJLmwJ
 // array describing the name and general information of fictional planets
+
+/*
+Source if for hover information
+*/
 const data = [
   {
-    planet: 'Abydos',
-    source: 'Stargate and later in the TV Series Stargate SG-1',
-    year: '1994',
+    gekozen: 2,
+    koppigheid: '1-15',
+    deelgedrag: 'vaak',
+    schermtijd: '4-7',
+  },
+  {
+    planet: 'Altair IV',
+    source: 'Forbidden Planet',
+    year: '1956',
     medium: 'Film',
+  },
+  {
+    planet: 'Anarres',
+    source: 'The Dispossessed by Ursula K. Le Guin',
+    year: '1974',
+    medium: 'Books',
   },
 ];
 
