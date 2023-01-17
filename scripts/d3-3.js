@@ -523,34 +523,6 @@ const gradientsStroke = outputDefs
     .attr('y1', '0%')
     .attr('y2', '100%');
   
-// stop color describing a lighter variation in the bottom left corner of the shape
-gradientsStroke
-    .append('stop')
-    .attr('stop-color', (d, i) => `hsl(${360 / data.length * i}, 99%, 52%)`)
-    .attr('offset', '0%');
-  
-gradientsStroke
-    .append('stop')
-    .attr('stop-color', (d, i) => `hsl(${360 / data.length * i}, 100%, 56%)`)
-    .attr('offset', '100%');
-  
-// radial gradient for the subtle light source include in the top right corner of each shape
-const gradientFill = outputDefs
-    .append('radialGradient')
-    .attr('id', 'gradient-fill')
-    .attr('cx', 0.7)
-    .attr('cy', 0.3);
-  
-gradientFill
-    .append('stop')
-    .attr('stop-color', '#fff7c3')
-    .attr('offset', '0%');
-  
-gradientFill
-    .append('stop')
-    .attr('stop-color', '#ffe1c0')
-    .attr('offset', '100%');
-  
 // group in which to plot the visualization
 const outputGroup = outputSVG
     .append('g')
