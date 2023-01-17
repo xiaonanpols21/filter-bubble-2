@@ -646,7 +646,6 @@ const planets = planetsGroup
         .style('visibility', 'visible')
         .style('left', `${d3.event.pageX}px`)
         .style('top', `${d3.event.pageY}px`)
-        .style('border-bottom', `5px solid hsl(${360 / data.length * i}, 90%, 67%)`);
     })
 
     // on exit hide the tooltip and remove the nested paragraph elements
@@ -773,3 +772,14 @@ function handleSelection() {
         .restart();
 }
 select.addEventListener('change', handleSelection);
+
+const legendaBtn = document.querySelector(".legenda-container button");
+const legenda = document.querySelector(".legenda");
+
+legenda.classList.add("none");
+
+function showLegenda() {
+    legenda.classList.toggle("show");
+}
+
+legendaBtn.addEventListener("click", showLegenda);

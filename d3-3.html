@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1 class="visually-hidden">Simulator</h1>
     <main>
         <!-- div describing the select element to change the output -->
         <div class="input">
@@ -21,6 +22,19 @@
     
         <!-- div nesting the d3 powered visualization -->
         <div class="output"></div>
+
+        <div class="legenda-container">
+            <button>Legenda</button>
+            <section class="legenda">
+                <h2>Hoe vaak is de kans dat ik iets deel?</h2>
+                <ul>
+                    <li>Altijd</li>
+                    <li>Vaak</li>
+                    <li>Soms</li>
+                    <li>Nooit</li>
+                </ul>
+            </section>
+        </div>
     </main>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js'></script>
     <script type="module" src="./scripts/d3-3.js"></script>

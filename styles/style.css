@@ -394,30 +394,32 @@ div.tooltip {
   pointer-events: none;
 }
 
-/* style the input with a white outline */
-main .input {
-  margin: 1rem 0;
-}
-
-main .input select {
-  padding: 0.5rem 5rem;
-  padding-left: 0.25rem;
+.input select {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: "Manrope", sans-serif;
+  padding: 10px 20px;
+  width: 250px;
   text-align: left;
-  background: none;
   color: inherit;
   border: 2px solid currentColor;
   text-transform: uppercase;
   line-height: 2;
-  font-family: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  background: url(../img/arrow.svg) no-repeat 90% center;
+  background-size: 10px 10px;
 }
 
-main .input select option {
+.input select option {
   background: #1a1a1a;
   color: inherit;
 }
 
 /* cap the width of the wrapping container and horizontally center the element */
-main .output svg {
+.output svg {
   width: 100%;
   height: auto;
   font-family: "Orbitron", sans-serif;
@@ -440,7 +442,7 @@ main .output svg {
   display: grid;
   /* display the information in a grid
     three columns, the first of which stretches to occupy the available space
-  */
+    */
   -ms-grid-columns: 1fr auto auto;
       grid-template-columns: 1fr auto auto;
   grid-gap: 0.25rem;
@@ -465,6 +467,96 @@ main .output svg {
 /* have the source spread to cover the entirety of the second row */
 #tooltip .source {
   grid-column: span 3;
+}
+
+.legenda-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+}
+
+.legenda-container button {
+  font-size: 20px;
+  line-height: 32px;
+  padding: 10px 25px;
+  background-color: #F9C600;
+  border-radius: 15px;
+  border: 5px solid #F9C600;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.legenda-container button:hover {
+  background-color: transparent;
+  color: #F9C600;
+}
+
+.legenda {
+  position: absolute;
+  right: 0px;
+  bottom: 90px;
+  font-size: 20px;
+  line-height: 32px;
+  padding: 20px;
+  width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  border: 5px solid #F9C600;
+  color: black;
+  text-align: center;
+}
+
+.legenda h2 {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.legenda ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+}
+
+.legenda ul li {
+  position: relative;
+}
+
+.legenda ul li:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff0050;
+}
+
+.legenda ul li:first-of-type:before {
+  background-color: #68E77A;
+}
+
+.legenda ul li:nth-of-type(2):before {
+  background-color: #FDDC80;
+}
+
+.legenda ul li:nth-of-type(3):before {
+  background-color: #06B4FF;
+}
+
+.legenda ul li:last-of-type:before {
+  background-color: #D382FF;
 }
 
 * {
@@ -498,5 +590,9 @@ a {
 
 .none {
   display: none;
+}
+
+.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
