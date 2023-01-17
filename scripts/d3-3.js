@@ -9,60 +9,342 @@ De filter bubble begint bij medium.
 Source wordt getoont met hover
 
 Medium = gekozenTiktok
-Planet = deelGedrag
+Planet = koppigheid
 
-1994
+600 - 1800
 */
 
 // array describing the name and general information of fictional planets
 const data = [
     {
-      deelGedrag: 'Altijd',
+      koppigheid: 'A 1-15',
       source: 'Stargate and later in the 5 eens 0 oneens Stargate SG-1',
-      year: '600 - 1800',
+      schermtijd: '600 - 1800',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      deelGedrag: 'Vaak',
-      source: 'Forbidden deelGedrag',
-      year: '2400 - 4200',
+      koppigheid: 'F 16-31',
+      source: 'Forbidden koppigheid',
+      schermtijd: '2400 - 4200',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      deelGedrag: 'Soms',
+      koppigheid: 'K 32-45',
       source: 'The Dispossessed by Ursula K. Le Guin',
-      year: '4800',
+      schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      deelGedrag: 'Nooit',
+      koppigheid: 'P 46-50',
       source: 'Dune by Frank Herbert, and subsequent works in the Dune universe',
-      year: '600 - 1800',
+      schermtijd: '600 - 1800',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      deelGedrag: 'Altijd',
+      koppigheid: 'A 1-15',
       source: 'Dark Sun setting for Dungeons & Dragons',
-      year: '600 - 1800',
+      schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      deelGedrag: 'Soms',
+      koppigheid: 'K 32-45',
       source: 'Bionicle',
-      year: '2400 - 4200',
+      schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      deelGedrag: 'Vaak',
+      koppigheid: 'F 16-31',
       source: '"Beachworld" by Stephen King',
-      year: '4800',
+      schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      deelGedrag: 'Nooit',
+      koppigheid: 'P 46-50',
       source: 'Star Wars: Dark Empire',
-      year: '4800',
+      schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Star Trek: The 2 eens 3 oneens Series episode "The Eye of the Beholder"',
+      schermtijd: '4800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Star Trek: Deep Space Nine episode "The Homecoming"',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Star Trek: The Original Series episode "Space Seed", Star Trek II: The Wrath of Khan',
+      schermtijd: '4800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: "Star Trek: The Next Generation episode \"Journey's End\"",
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Star Trek: Deep Space Nine episode "Indiscretion"',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Lexx season 3',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Enemy Mine',
+      schermtijd: '4800',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Les Maîtres du temps',
+      schermtijd: '4800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Star Wars: Episode II – Attack of the Clones',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Trigun',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Now and Then, Here and There',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Worldwar',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Dragonball GT',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Star Wars: The Force Awakens',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'Noit',
+      source: 'Star Fox 64 and Star Fox Assault',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Space Quest: The Sarien Encounter',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Homeworld',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Ben 10',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Starship Troopers by Robert A. Heinlein, and subsequent works',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Star Trek Nemesis',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'StarCraft and subsequent 1 eens 4 oneenss in the StarCraft franchise',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Star Wars: Knights of the Old Republic',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Pitch Black',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: "K 32-45",
+      source: "Hammerfall (and later 2004's Forge of Heaven) by C. J. Cherryh",
+      schermtijd: '4800',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Phantasy Star',
+      schermtijd: '4800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Star Trek: Voyager',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Futurama episode "A Pharaoh to Remember"',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Les Maîtres du temps',
+      schermtijd: '4800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Kin-dza-dza!',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Revelation Space by Alastair Reynolds',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Kirby 64: The Crystal Shards',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Salt by Adam Roberts',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'F-Zero',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Star Wars: The Roleplaying 1 eens 4 oneens adventure The Black Sands of Socorro',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Galactica 2400 - 4200 episode "The Return of Starbuck"',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Warhammer 40,000 universe',
+      schermtijd: '4800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Star Wars Episode IV: A New Hope and Star Wars Episode VI: Return of the Jedi',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Star Fox 64 for Nintendo 64',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '1 eens 4 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Roughnecks: Starship Troopers Chronicles',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'A 1-15',
+      source: 'Star Trek: Deep Space Nine episode "The Ship"',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Star Trek: Enterprise episode "Desert Crossing"',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Futurama episode "My Three Suns"',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '2 eens 3 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Star Trek: Deep Space Nine episodes "Image in the Sand" and "Shadows and Symbols"',
+      schermtijd: '600 - 1800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Snare by Katharine Kerr',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '4 eens 1 oneens',
+    },
+    {
+      koppigheid: 'K 32-45',
+      source: 'Star Trek episode "Arena"',
+      schermtijd: '4800',
+      gekozenTiktok: '5 eens 0 oneens',
+    },
+    {
+      koppigheid: 'P 46-50',
+      source: 'Spaceballs',
+      schermtijd: '4800',
+      gekozenTiktok: '3 eens 2 oneens',
+    },
+    {
+      koppigheid: 'F 16-31',
+      source: 'Star Trek: The Original Series and subsequent works in the Star Trek universe',
+      schermtijd: '2400 - 4200',
+      gekozenTiktok: '5 eens 0 oneens',
     },
 ];
   
@@ -70,14 +352,14 @@ const data = [
 // list the categories for the different properties
 // planet, describing ranges of letters in the alphabet
 // ["A", "E"], ["F", "J"], ...
-const deelGedrag = [];
+const koppigheid = [];
 const letterA = 'A'.charCodeAt(0);
 const letterZ = 'Z'.charCodeAt(0);
 
 for (let i = letterA; i < letterZ; i += 5) {
-deelGedrag.push([String.fromCharCode(i), String.fromCharCode(i + 3)]);
+koppigheid.push([String.fromCharCode(i), String.fromCharCode(i + 3)]);
 }
-deelGedrag[deelGedrag.length - 1][1] = 'Z';
+koppigheid[koppigheid.length - 1][1] = 'Z';
 
 
   // medium categories using unique values from the medium property
@@ -85,14 +367,14 @@ deelGedrag[deelGedrag.length - 1][1] = 'Z';
   
   // year categories describing five periods between the oldest and newest release
   const oldest = data.reduce((acc, curr) => {
-    const current = curr.year.match(/\d{4}/);
+    const current = curr.schermtijd.match(/\d{4}/);
     if (current) {
       return current[0] < acc ? current[0] : acc;
     }
     return acc;
   }, 800);
   const newest = data.reduce((acc, curr) => {
-    const current = curr.year.match(/\d{4}/);
+    const current = curr.schermtijd.match(/\d{4}/);
     if (current) {
       return current[0] > acc ? current[0] : acc;
     }
@@ -101,17 +383,17 @@ deelGedrag[deelGedrag.length - 1][1] = 'Z';
   
   const difference = parseInt(newest, 10) - parseInt(oldest, 10);
   const range = Math.floor(difference / 4);
-  const year = [];
+  const schermtijd = [];
   for (let i = parseInt(newest, 10); i > parseInt(oldest, 10); i -= range) {
-    year.push([i - (range - 1), i]);
+    schermtijd.push([i - (range - 1), i]);
   }
   
   // object describing each category in an array
   // ! for the medium and year the array is multidimensional, itself describing the starting/ending letter/year for each range
   const categories = {
-    deelGedrag,
+    koppigheid,
     gekozenTiktok: [...gekozenTiktok],
-    year: year.reverse(),
+    schermtijd: schermtijd.reverse(),
   };
   
   
@@ -129,7 +411,7 @@ deelGedrag[deelGedrag.length - 1][1] = 'Z';
   });
   
   // select the first option
-  select.value = 'year';
+  select.value = 'koppigheid';
   input.appendChild(select);
   
   
@@ -266,24 +548,24 @@ deelGedrag[deelGedrag.length - 1][1] = 'Z';
   // for each planet add a wrapping group
   // this to gather together multiple shapes
   const planets = planetsGroup
-    .selectAll('g.deelGedrag')
+    .selectAll('g.koppigheid')
     // bind each group element with the name of the planet
-    .data(data, d => d.deelGedrag)
+    .data(data, d => d.koppigheid)
     .enter()
     .append('g')
-    .attr('class', 'deelGedrag')
+    .attr('class', 'koppigheid')
     // on enter show the tooltip and add the information through paragraph elements
     .on('mouseenter', (d, i) => {
       tooltip
         .append('p')
-        .attr('class', 'deelGedrag')
+        .attr('class', 'koppigheid')
         .append('strong')
-        .text(d.deelGedrag);
+        .text(d.koppigheid);
   
       tooltip
         .append('p')
-        .attr('class', 'year')
-        .text(d.year);
+        .attr('class', 'schermtijd')
+        .text(d.schermtijd);
   
       tooltip
         .append('p')
@@ -374,7 +656,7 @@ deelGedrag[deelGedrag.length - 1][1] = 'Z';
         return category === selectedCategory;
       }
       const [startingValue, endingValue] = category;
-      const matchingValue = value === 'deelGedrag' ? selectedCategory[0] : parseInt(selectedCategory.match(/\d{4}/)[0], 10);
+      const matchingValue = value === 'koppigheid' ? selectedCategory[0] : parseInt(selectedCategory.match(/\d{4}/)[0], 10);
       return matchingValue >= startingValue && matchingValue <= endingValue;
     });
     // return the coordinates of the center for the matching category
