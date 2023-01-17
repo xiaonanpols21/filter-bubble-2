@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Orbitron:900&display=swap");
 .index-body {
   display: -ms-grid;
   display: grid;
@@ -395,29 +394,6 @@ div.tooltip {
   pointer-events: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  background: #feae58;
-  background: #131930;
-  color: #c5fcc5;
-  color: #f9c690;
-  color: #fff;
-  font-family: "Lato", sans-serif;
-}
-
-main {
-  min-height: 100vh;
-  text-align: center;
-  padding: 1rem;
-}
-
 /* style the input with a white outline */
 main .input {
   margin: 1rem 0;
@@ -441,12 +417,6 @@ main .input select option {
 }
 
 /* cap the width of the wrapping container and horizontally center the element */
-main .output {
-  max-width: 750px;
-  width: 90vw;
-  margin: 1rem auto;
-}
-
 main .output svg {
   width: 100%;
   height: auto;
