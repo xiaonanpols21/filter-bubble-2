@@ -8,355 +8,358 @@ import gsap from "gsap";
 De filter bubble begint bij medium.
 Source wordt getoont met hover
 
-Medium = chooseTiktok
-
+Medium = gekozenTiktok
+Planet = deelGedrag
 */
 
 // array describing the name and general information of fictional planets
 const data = [
     {
-      planet: 'Altijd',
+      deelGedrag: 'Altijd',
       source: 'Stargate and later in the 5 eens 0 oneens Stargate SG-1',
       year: '1994',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Vaak',
-      source: 'Forbidden Planet',
+      deelGedrag: 'Vaak',
+      source: 'Forbidden deelGedrag',
       year: '1956',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: 'The Dispossessed by Ursula K. Le Guin',
       year: '1974',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Nooit',
+      deelGedrag: 'Nooit',
       source: 'Dune by Frank Herbert, and subsequent works in the Dune universe',
       year: '1965',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Altijd',
+      deelGedrag: 'Altijd',
       source: 'Dark Sun setting for Dungeons & Dragons',
       year: '1991',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: 'Bionicle',
       year: '2009',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Vaak',
+      deelGedrag: 'Vaak',
       source: '"Beachworld" by Stephen King',
       year: '1985',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Nooit',
+      deelGedrag: 'Nooit',
       source: 'Star Wars: Dark Empire',
       year: '1991 – 1992',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Altijd',
+      deelGedrag: 'Altijd',
       source: 'Star Trek: The 2 eens 3 oneens Series episode "The Eye of the Beholder"',
       year: '1974',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Vaak',
+      deelGedrag: 'Vaak',
       source: 'Star Trek: Deep Space Nine episode "The Homecoming"',
       year: '1993',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: 'Star Trek: The Original Series episode "Space Seed", Star Trek II: The Wrath of Khan',
       year: '1967 - 1982',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: "Star Trek: The Next Generation episode \"Journey's End\"",
       year: '1994',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Nooit',
+      deelGedrag: 'Nooit',
       source: 'Star Trek: Deep Space Nine episode "Indiscretion"',
       year: '1995',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Altijd',
+      deelGedrag: 'Altijd',
       source: 'Lexx season 3',
       year: '1999',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Altijd',
+      deelGedrag: 'Altijd',
       source: 'Enemy Mine',
       year: '1985',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Vaak',
+      deelGedrag: 'Vaak',
       source: 'Les Maîtres du temps',
       year: '1982',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: 'Star Wars: Episode II – Attack of the Clones',
       year: '2002',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Soms',
+      deelGedrag: 'Soms',
       source: 'Trigun',
       year: '1995',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Nooit',
+      deelGedrag: 'Nooit',
       source: 'Now and Then, Here and There',
       year: '1999 - 2000',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Home',
+      deelGedrag: 'Altijd',
       source: 'Worldwar',
       year: '1994 - 2004',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Imecka',
+      deelGedrag: 'Altijd',
       source: 'Dragonball GT',
       year: '1996',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Jakku',
+      deelGedrag: 'Nooit',
       source: 'Star Wars: The Force Awakens',
       year: '2015',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Katina',
+      deelGedrag: 'Noit',
       source: 'Star Fox 64 and Star Fox Assault',
       year: '1997',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Kerona',
+      deelGedrag: 'Vaak',
       source: 'Space Quest: The Sarien Encounter',
       year: '1986',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Kharak',
+      deelGedrag: 'Soms',
       source: 'Homeworld',
       year: '1999',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Khoros',
+      deelGedrag: 'Nooit',
       source: 'Ben 10',
       year: '2005 – 2008',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Klendathu',
+      deelGedrag: 'Altijd',
       source: 'Starship Troopers by Robert A. Heinlein, and subsequent works',
       year: '1959',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Kolarus III',
+      deelGedrag: 'Altijd',
       source: 'Star Trek Nemesis',
       year: '2002',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Korhal',
+      deelGedrag: 'Nooit',
       source: 'StarCraft and subsequent 1 eens 4 oneenss in the StarCraft franchise',
       year: '1998',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Korriban',
+      deelGedrag: 'Vaak',
       source: 'Star Wars: Knights of the Old Republic',
       year: '2003',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'M6-117',
+      deelGedrag: 'Vaak',
       source: 'Pitch Black',
       year: '2000',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: "Marak's World",
+      deelGedrag: "Soms",
       source: "Hammerfall (and later 2004's Forge of Heaven) by C. J. Cherryh",
       year: '2001',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Motavia',
+      deelGedrag: 'Altijd',
       source: 'Phantasy Star',
       year: '1987',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Ocampa',
+      deelGedrag: 'Vaak',
       source: 'Star Trek: Voyager',
       year: '1994 – 1997',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Osiris IV',
+      deelGedrag: 'Soms',
       source: 'Futurama episode "A Pharaoh to Remember"',
       year: '2002',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Perdide',
+      deelGedrag: 'Soms',
       source: 'Les Maîtres du temps',
       year: '1982',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Plyuk',
+      deelGedrag: 'Nooit',
       source: 'Kin-dza-dza!',
       year: '1986',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Resurgam',
+      deelGedrag: 'Altijd',
       source: 'Revelation Space by Alastair Reynolds',
       year: '2000',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Rock Star',
+      deelGedrag: 'Nooit',
       source: 'Kirby 64: The Crystal Shards',
       year: '2000',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Salt',
+      deelGedrag: 'Nooit',
       source: 'Salt by Adam Roberts',
       year: '2000',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Sand Ocean',
+      deelGedrag: 'Nooit',
       source: 'F-Zero',
       year: '1991',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Socorro',
+      deelGedrag: 'Vaak',
       source: 'Star Wars: The Roleplaying 1 eens 4 oneens adventure The Black Sands of Socorro',
       year: '1997',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Starbuck',
+      deelGedrag: 'Vaak',
       source: 'Galactica 1980 episode "The Return of Starbuck"',
       year: '1980',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Tallarn and other planets',
+      deelGedrag: 'Soms',
       source: 'Warhammer 40,000 universe',
       year: '1987',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Tatooine',
+      deelGedrag: 'Nooit',
       source: 'Star Wars Episode IV: A New Hope and Star Wars Episode VI: Return of the Jedi',
       year: '1977 - 1983',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Titania',
+      deelGedrag: 'Nooit',
       source: 'Star Fox 64 for Nintendo 64',
       year: '1997',
       gekozenTiktok: '1 eens 4 oneens',
     },
     {
-      planet: 'Tophet',
+      deelGedrag: 'Altijd',
       source: 'Roughnecks: Starship Troopers Chronicles',
       year: '1999',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Torga IV',
+      deelGedrag: 'Altijd',
       source: 'Star Trek: Deep Space Nine episode "The Ship"',
       year: '1996',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Toroth',
+      deelGedrag: 'Nooit',
       source: 'Star Trek: Enterprise episode "Desert Crossing"',
       year: '2002',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Trisol',
+      deelGedrag: 'Nooit',
       source: 'Futurama episode "My Three Suns"',
       year: '1999',
       gekozenTiktok: '2 eens 3 oneens',
     },
     {
-      planet: 'Tyree',
+      deelGedrag: 'Soms',
       source: 'Star Trek: Deep Space Nine episodes "Image in the Sand" and "Shadows and Symbols"',
       year: '1998',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Unnamed planet',
+      deelGedrag: 'Soms',
       source: 'Snare by Katharine Kerr',
       year: '2003',
       gekozenTiktok: '4 eens 1 oneens',
     },
     {
-      planet: 'Unnamed planet',
+      deelGedrag: 'Soms',
       source: 'Star Trek episode "Arena"',
       year: '1967',
       gekozenTiktok: '5 eens 0 oneens',
     },
     {
-      planet: 'Vega',
+      deelGedrag: 'Nooit',
       source: 'Spaceballs',
       year: '1987',
       gekozenTiktok: '3 eens 2 oneens',
     },
     {
-      planet: 'Vulcan',
+      deelGedrag: 'Vaak',
       source: 'Star Trek: The Original Series and subsequent works in the Star Trek universe',
       year: '1966',
       gekozenTiktok: '5 eens 0 oneens',
     },
-  ];
+];
   
-  // SETUP
-  // list the categories for the different properties
-  // planet, describing ranges of letters in the alphabet
-  // ["A", "E"], ["F", "J"], ...
-  const planet = [];
-  const letterA = 'A'.charCodeAt(0);
-  const letterZ = 'Z'.charCodeAt(0);
-  for (let i = letterA; i < letterZ; i += 5) {
-    planet.push([String.fromCharCode(i), String.fromCharCode(i + 4)]);
-  }
-  planet[planet.length - 1][1] = 'Z';
+// SETUP
+// list the categories for the different properties
+// planet, describing ranges of letters in the alphabet
+// ["A", "E"], ["F", "J"], ...
+const deelGedrag = [];
+const letterA = 'A'.charCodeAt(0);
+const letterZ = 'Z'.charCodeAt(0);
+
+for (let i = letterA; i < letterZ; i += 5) {
+deelGedrag.push([String.fromCharCode(i), String.fromCharCode(i + 3)]);
+}
+deelGedrag[deelGedrag.length - 1][1] = 'Z';
+
+
   // medium categories using unique values from the medium property
   const gekozenTiktok = new Set(data.map(item => item.gekozenTiktok));
   
@@ -386,7 +389,7 @@ const data = [
   // object describing each category in an array
   // ! for the medium and year the array is multidimensional, itself describing the starting/ending letter/year for each range
   const categories = {
-    planet,
+    deelGedrag,
     gekozenTiktok: [...gekozenTiktok],
     year: year.reverse(),
   };
@@ -406,7 +409,7 @@ const data = [
   });
   
   // select the first option
-  select.value = 'planet';
+  select.value = 'deelGedrag';
   input.appendChild(select);
   
   
@@ -543,19 +546,19 @@ const data = [
   // for each planet add a wrapping group
   // this to gather together multiple shapes
   const planets = planetsGroup
-    .selectAll('g.planet')
+    .selectAll('g.deelGedrag')
     // bind each group element with the name of the planet
-    .data(data, d => d.planet)
+    .data(data, d => d.deelGedrag)
     .enter()
     .append('g')
-    .attr('class', 'planet')
+    .attr('class', 'deelGedrag')
     // on enter show the tooltip and add the information through paragraph elements
     .on('mouseenter', (d, i) => {
       tooltip
         .append('p')
-        .attr('class', 'planet')
+        .attr('class', 'deelGedrag')
         .append('strong')
-        .text(d.planet);
+        .text(d.deelGedrag);
   
       tooltip
         .append('p')
@@ -651,7 +654,7 @@ const data = [
         return category === selectedCategory;
       }
       const [startingValue, endingValue] = category;
-      const matchingValue = value === 'planet' ? selectedCategory[0] : parseInt(selectedCategory.match(/\d{4}/)[0], 10);
+      const matchingValue = value === 'deelGedrag' ? selectedCategory[0] : parseInt(selectedCategory.match(/\d{4}/)[0], 10);
       return matchingValue >= startingValue && matchingValue <= endingValue;
     });
     // return the coordinates of the center for the matching category
