@@ -21,54 +21,63 @@ const data = [
       source: 'Stargate and later in the 5 eens 0 oneens Stargate SG-1',
       schermtijd: '600 - 1800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Forbidden koppigheid',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'K 32-45',
       source: 'The Dispossessed by Ursula K. Le Guin',
       schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Dune by Frank Herbert, and subsequent works in the Dune universe',
       schermtijd: '600 - 1800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Dark Sun setting for Dungeons & Dragons',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Bionicle',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'F 16-31',
       source: '"Beachworld" by Stephen King',
       schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Wars: Dark Empire',
       schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Star Trek: The 2 eens 3 oneens Series episode "The Eye of the Beholder"',
       schermtijd: '4800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'F 16-31',
@@ -81,272 +90,329 @@ const data = [
       source: 'Star Trek: The Original Series episode "Space Seed", Star Trek II: The Wrath of Khan',
       schermtijd: '4800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'K 32-45',
       source: "Star Trek: The Next Generation episode \"Journey's End\"",
       schermtijd: '600 - 1800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Trek: Deep Space Nine episode "Indiscretion"',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Lexx season 3',
       schermtijd: '600 - 1800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Enemy Mine',
       schermtijd: '4800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Les Maîtres du temps',
       schermtijd: '4800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Star Wars: Episode II – Attack of the Clones',
       schermtijd: '600 - 1800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Trigun',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Now and Then, Here and There',
       schermtijd: '600 - 1800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Worldwar',
       schermtijd: '600 - 1800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Dragonball GT',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Wars: The Force Awakens',
       schermtijd: '600 - 1800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'Noit',
       source: 'Star Fox 64 and Star Fox Assault',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Space Quest: The Sarien Encounter',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Homeworld',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Ben 10',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Starship Troopers by Robert A. Heinlein, and subsequent works',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Star Trek Nemesis',
       schermtijd: '600 - 1800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'P 46-50',
       source: 'StarCraft and subsequent 1 eens 4 oneenss in the StarCraft franchise',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Star Wars: Knights of the Old Republic',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Pitch Black',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: "K 32-45",
       source: "Hammerfall (and later 2004's Forge of Heaven) by C. J. Cherryh",
       schermtijd: '4800',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Phantasy Star',
       schermtijd: '4800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Star Trek: Voyager',
       schermtijd: '600 - 1800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Futurama episode "A Pharaoh to Remember"',
       schermtijd: '600 - 1800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Les Maîtres du temps',
       schermtijd: '4800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Soms",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Kin-dza-dza!',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Revelation Space by Alastair Reynolds',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Kirby 64: The Crystal Shards',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Salt by Adam Roberts',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'F-Zero',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Star Wars: The Roleplaying 1 eens 4 oneens adventure The Black Sands of Socorro',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Galactica 2400 - 4200 episode "The Return of Starbuck"',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Warhammer 40,000 universe',
       schermtijd: '4800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Wars Episode IV: A New Hope and Star Wars Episode VI: Return of the Jedi',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Fox 64 for Nintendo 64',
       schermtijd: '600 - 1800',
       gekozenTiktok: '1 eens 4 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Roughnecks: Starship Troopers Chronicles',
       schermtijd: '600 - 1800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'A 1-15',
       source: 'Star Trek: Deep Space Nine episode "The Ship"',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Star Trek: Enterprise episode "Desert Crossing"',
       schermtijd: '600 - 1800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Futurama episode "My Three Suns"',
       schermtijd: '600 - 1800',
       gekozenTiktok: '2 eens 3 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Star Trek: Deep Space Nine episodes "Image in the Sand" and "Shadows and Symbols"',
       schermtijd: '600 - 1800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Nooit",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Snare by Katharine Kerr',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '4 eens 1 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'K 32-45',
       source: 'Star Trek episode "Arena"',
       schermtijd: '4800',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'P 46-50',
       source: 'Spaceballs',
       schermtijd: '4800',
       gekozenTiktok: '3 eens 2 oneens',
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: 'F 16-31',
       source: 'Star Trek: The Original Series and subsequent works in the Star Trek universe',
       schermtijd: '2400 - 4200',
       gekozenTiktok: '5 eens 0 oneens',
+      deelGedrag: "Altijd",
     },
 ];
+
+function colorPicker(d) {
+  if (d.deelGedrag == "Altijd") {
+    return "#68E77A";
+  } else if (d.deelGedrag == "Vaak") {
+    return "#FDDC80";
+  } else if (d.deelGedrag == "Soms") {
+    return "#06B4FF";
+  } else {
+    return "#D382FF";
+  }
+}
   
 // SETUP
 // list the categories for the different properties
@@ -596,7 +662,6 @@ koppigheid[koppigheid.length - 1][1] = 'Z';
         .remove();
     });
   
-  
   // for each planet add a circle
   planets
     .append('circle')
@@ -604,12 +669,13 @@ koppigheid[koppigheid.length - 1][1] = 'Z';
     .attr('cx', 0)
     .attr('cy', 0)
     .attr('class', 'bubble')
-    .attr('fill', (d, i) => `hsl(${360 / data.length * i}, 90%, 67%)`)
-    // use the matching gradient for the stroke
-    .attr('stroke', (d, i) => `url(#gradient-stroke${i})`)
-    .attr('stroke-width', '2');
+    //.attr('fill', (d, i) => `hsl(${360 / data.length * i}, 100%, 50%)`)
+    .attr("fill", d => 
+        colorPicker(d)
+    )
   
   // add a semi transparent circle with the chosen radial gradient
+  /*
   planets
     .append('circle')
     .attr('r', 12)
@@ -618,8 +684,10 @@ koppigheid[koppigheid.length - 1][1] = 'Z';
     .attr('fill', 'url(#gradient-fill)')
     .attr('opacity', '0.3')
     .style('pointer-events', 'none');
+    */
   
   // add a small line to reinforce the idea of a light source
+  /*
   planets
     .append('path')
     .attr('d', 'M 0 -8 a 8 8 0 0 1 8 8')
@@ -631,7 +699,7 @@ koppigheid[koppigheid.length - 1][1] = 'Z';
     .attr('stroke-width', '2')
     .attr('stroke-linecap', 'round')
     .style('pointer-events', 'none');
-  
+  */
   
   // D3 FORCE
   
