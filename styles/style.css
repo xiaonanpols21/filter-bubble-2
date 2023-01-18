@@ -394,6 +394,12 @@ div.tooltip {
   pointer-events: none;
 }
 
+.body-sim h1 {
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+}
+
 g {
   -webkit-transform: translate(150px, 150px);
           transform: translate(150px, 150px);
