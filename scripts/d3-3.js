@@ -446,41 +446,6 @@ const data = [
   },
 ];
 
-var width = 300, height = 300;
-
-// Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
-var colorScale = ['orange', 'lightblue', '#B19CD9'];
-var xCenter = [100, 300, 500, 700];
-
-var simulation = d3.forceSimulation(data)
-	.force('charge', d3.forceManyBody().strength(5))
-	.force('x', d3.forceX().x(function(d) {
-        console.log( xCenter[d.deelGedrag])
-        return xCenter[d.deelGedrag];
-	}))
-	.force('collision', d3.forceCollide().radius(function(d) {
-		return 15;
-	}))
-	.on('tick', ticked);
-
-function ticked() {
-	d3.select('.bubbles')
-		.selectAll('circle')
-		.data(data)
-		.join('circle')
-        .attr("r", 10)
-        //.attr("fill", "#ff0066")
-        .attr("fill", d => 
-            colorPicker(d)
-        )
-		.attr('cx', function(d) {
-			return d.x;
-		})
-		.attr('cy', function(d) {
-			return d.y;
-		});
-}
-
 // ColorPicker deelGedrag
 function colorPicker(d) {
     if (d.deelGedrag == 3) {
@@ -494,31 +459,35 @@ function colorPicker(d) {
     }
 };
 
-/*
+// Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
+var colorScale = ['orange', 'lightblue', '#B19CD9'];
+var xCenter = [100, 300, 500, 700];
 
 d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(5))
-	.force('center', d3.forceCenter(width / 2, height / 2))
-	.force('collision', d3.forceCollide().radius(function(d) {
-		return 15
+	.force('x', d3.forceX().x(function(d) {
+        console.log( xCenter[d.deelGedrag])
+        return xCenter[d.deelGedrag];
 	}))
-	.on('tick', ticked);
+	.force('collision', d3.forceCollide().radius(function(d) {
+		return 15;
+	}))
+	.on('tick', ticked)
+;
 
 function ticked() {
 	d3.select('.bubbles')
 		.selectAll('circle')
 		.data(data)
 		.join('circle')
+        .attr("r", 10)
         .attr("fill", d => 
             colorPicker(d)
         )
-        .attr("r", 10)
-
 		.attr('cx', function(d) {
-			return d.x
+			return d.x;
 		})
 		.attr('cy', function(d) {
-			return d.y
-		})
-}
-*/
+			return d.y;
+		});
+};
