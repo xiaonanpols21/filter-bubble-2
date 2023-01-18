@@ -8,3 +8,94 @@
 g {
     transform: translate(150px, 150px);
 }
+
+
+// Legenda
+.legenda-container {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: fit-content;
+    text-align: right;
+
+    button {
+        @include f18;
+        padding: 10px 25px;
+        background-color: $yellow;
+        border-radius: 15px;
+        border: 5px solid $yellow;
+        font-family: $font-stack;
+        font-weight: bold;
+        transition: $trans4;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: transparent;
+            color: $yellow;
+        }
+    }
+}
+
+
+.legenda {
+    position: absolute;
+    right: 0px;
+    bottom: 90px;
+    @include f18;
+    padding: 20px;
+    width: 400px;
+    background-color: $white;
+    border-radius: 15px;
+    border: 5px solid $yellow;
+    color: $black;
+    text-align: center;
+
+    h2 {
+        @include f18;
+        margin-bottom: 10px
+    }
+
+    ul {
+        @include grid(1fr 1fr, 20px);
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: '';
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $pink;
+            }
+
+            &:first-of-type {
+                &:before {
+                    background-color: #68E77A;
+                }
+            }
+
+            &:nth-of-type(2) {
+                &:before {
+                    background-color: #FDDC80;
+                }
+            }
+
+            &:nth-of-type(3) {
+                &:before {
+                    background-color: #06B4FF;
+                }
+            }
+
+            &:last-of-type {
+                &:before {
+                    background-color: #D382FF;
+                }
+            }
+        }
+    }
+}
