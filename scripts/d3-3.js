@@ -10,8 +10,7 @@ const data = [
     source: 'Stargate and later in the 5 eens 0 oneens Stargate SG-1',
     schermtijd: '600 - 1800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Vaak",
-    category: 0
+    deelGedrag: 0,
   },
   {
     id: 2,
@@ -19,7 +18,7 @@ const data = [
     source: 'Forbidden koppigheid',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 3,
@@ -27,7 +26,7 @@ const data = [
     source: 'The Dispossessed by Ursula K. Le Guin',
     schermtijd: '4800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 4,
@@ -35,7 +34,7 @@ const data = [
     source: 'Dune by Frank Herbert, and subsequent works in the Dune universe',
     schermtijd: '600 - 1800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 5,
@@ -43,7 +42,7 @@ const data = [
     source: 'Dark Sun setting for Dungeons & Dragons',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 6,
@@ -51,7 +50,7 @@ const data = [
     source: 'Bionicle',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 7,
@@ -59,7 +58,7 @@ const data = [
     source: '"Beachworld" by Stephen King',
     schermtijd: '4800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 8,
@@ -67,7 +66,7 @@ const data = [
     source: 'Star Wars: Dark Empire',
     schermtijd: '4800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 9,
@@ -75,7 +74,7 @@ const data = [
     source: 'Star Trek: The 2 eens 3 oneens Series episode "The Eye of the Beholder"',
     schermtijd: '4800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 10,
@@ -83,6 +82,7 @@ const data = [
     source: 'Star Trek: Deep Space Nine episode "The Homecoming"',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '5 eens 0 oneens',
+    deelGedrag: 1,
   },
   {
     id: 11,
@@ -90,7 +90,7 @@ const data = [
     source: 'Star Trek: The Original Series episode "Space Seed", Star Trek II: The Wrath of Khan',
     schermtijd: '4800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 12,
@@ -98,7 +98,7 @@ const data = [
     source: "Star Trek: The Next Generation episode \"Journey's End\"",
     schermtijd: '600 - 1800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 13,
@@ -106,7 +106,7 @@ const data = [
     source: 'Star Trek: Deep Space Nine episode "Indiscretion"',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 14,
@@ -114,7 +114,7 @@ const data = [
     source: 'Lexx season 3',
     schermtijd: '600 - 1800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 15,
@@ -122,7 +122,7 @@ const data = [
     source: 'Enemy Mine',
     schermtijd: '4800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 16,
@@ -130,7 +130,7 @@ const data = [
     source: 'Les Maîtres du temps',
     schermtijd: '4800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 17,
@@ -138,7 +138,7 @@ const data = [
     source: 'Star Wars: Episode II – Attack of the Clones',
     schermtijd: '600 - 1800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 18,
@@ -146,7 +146,7 @@ const data = [
     source: 'Trigun',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 19,
@@ -154,7 +154,7 @@ const data = [
     source: 'Now and Then, Here and There',
     schermtijd: '600 - 1800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 20,
@@ -162,7 +162,7 @@ const data = [
     source: 'Worldwar',
     schermtijd: '600 - 1800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 21,
@@ -170,7 +170,7 @@ const data = [
     source: 'Dragonball GT',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 22,
@@ -178,7 +178,7 @@ const data = [
     source: 'Star Wars: The Force Awakens',
     schermtijd: '600 - 1800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 23,
@@ -186,7 +186,7 @@ const data = [
     source: 'Star Fox 64 and Star Fox Assault',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 24,
@@ -194,7 +194,7 @@ const data = [
     source: 'Space Quest: The Sarien Encounter',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 25,
@@ -202,7 +202,7 @@ const data = [
     source: 'Homeworld',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 26,
@@ -210,7 +210,7 @@ const data = [
     source: 'Ben 10',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 27,
@@ -218,7 +218,7 @@ const data = [
     source: 'Starship Troopers by Robert A. Heinlein, and subsequent works',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 28,
@@ -226,7 +226,7 @@ const data = [
     source: 'Star Trek Nemesis',
     schermtijd: '600 - 1800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 29,
@@ -234,7 +234,7 @@ const data = [
     source: 'StarCraft and subsequent 1 eens 4 oneenss in the StarCraft franchise',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
   {
     id: 30,
@@ -242,7 +242,7 @@ const data = [
     source: 'Star Wars: Knights of the Old Republic',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 31,
@@ -250,7 +250,7 @@ const data = [
     source: 'Pitch Black',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 32,
@@ -258,7 +258,7 @@ const data = [
     source: "Hammerfall (and later 2004's Forge of Heaven) by C. J. Cherryh",
     schermtijd: '4800',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 33,
@@ -266,7 +266,7 @@ const data = [
     source: 'Phantasy Star',
     schermtijd: '4800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 34,
@@ -274,7 +274,7 @@ const data = [
     source: 'Star Trek: Voyager',
     schermtijd: '600 - 1800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 35,
@@ -282,7 +282,7 @@ const data = [
     source: 'Futurama episode "A Pharaoh to Remember"',
     schermtijd: '600 - 1800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 36,
@@ -290,7 +290,7 @@ const data = [
     source: 'Les Maîtres du temps',
     schermtijd: '4800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Soms",
+    deelGedrag: 1,
   },
   {
     id: 37,
@@ -298,7 +298,7 @@ const data = [
     source: 'Kin-dza-dza!',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 38,
@@ -306,7 +306,7 @@ const data = [
     source: 'Revelation Space by Alastair Reynolds',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 39,
@@ -314,7 +314,7 @@ const data = [
     source: 'Kirby 64: The Crystal Shards',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 40,
@@ -322,7 +322,7 @@ const data = [
     source: 'Salt by Adam Roberts',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 41,
@@ -330,7 +330,7 @@ const data = [
     source: 'F-Zero',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 42,
@@ -338,7 +338,7 @@ const data = [
     source: 'Star Wars: The Roleplaying 1 eens 4 oneens adventure The Black Sands of Socorro',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 43,
@@ -346,7 +346,7 @@ const data = [
     source: 'Galactica 2400 - 4200 episode "The Return of Starbuck"',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 44,
@@ -354,7 +354,7 @@ const data = [
     source: 'Warhammer 40,000 universe',
     schermtijd: '4800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 45,
@@ -362,7 +362,7 @@ const data = [
     source: 'Star Wars Episode IV: A New Hope and Star Wars Episode VI: Return of the Jedi',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 46,
@@ -370,7 +370,7 @@ const data = [
     source: 'Star Fox 64 for Nintendo 64',
     schermtijd: '600 - 1800',
     gekozenTiktok: '1 eens 4 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 47,
@@ -378,7 +378,7 @@ const data = [
     source: 'Roughnecks: Starship Troopers Chronicles',
     schermtijd: '600 - 1800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 48,
@@ -386,7 +386,7 @@ const data = [
     source: 'Star Trek: Deep Space Nine episode "The Ship"',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 49,
@@ -394,7 +394,7 @@ const data = [
     source: 'Star Trek: Enterprise episode "Desert Crossing"',
     schermtijd: '600 - 1800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 50,
@@ -402,7 +402,7 @@ const data = [
     source: 'Futurama episode "My Three Suns"',
     schermtijd: '600 - 1800',
     gekozenTiktok: '2 eens 3 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 51,
@@ -410,7 +410,7 @@ const data = [
     source: 'Star Trek: Deep Space Nine episodes "Image in the Sand" and "Shadows and Symbols"',
     schermtijd: '600 - 1800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Nooit",
+    deelGedrag: 2,
   },
   {
     id: 52,
@@ -418,7 +418,7 @@ const data = [
     source: 'Snare by Katharine Kerr',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '4 eens 1 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 53,
@@ -426,7 +426,7 @@ const data = [
     source: 'Star Trek episode "Arena"',
     schermtijd: '4800',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 54,
@@ -434,7 +434,7 @@ const data = [
     source: 'Spaceballs',
     schermtijd: '4800',
     gekozenTiktok: '3 eens 2 oneens',
-    deelGedrag: "Vaak",
+    deelGedrag: 0,
   },
   {
     id: 55,
@@ -442,21 +442,21 @@ const data = [
     source: 'Star Trek: The Original Series and subsequent works in the Star Trek universe',
     schermtijd: '2400 - 4200',
     gekozenTiktok: '5 eens 0 oneens',
-    deelGedrag: "Altijd",
+    deelGedrag: 3,
   },
 ];
 
 var width = 300, height = 300;
 
+// Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
 var colorScale = ['orange', 'lightblue', '#B19CD9'];
 var xCenter = [100, 300, 500, 700];
 
 var simulation = d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(5))
 	.force('x', d3.forceX().x(function(d) {
-        if (d.deelGedrag ==  "Altijd") {
-            return xCenter[d.category];
-        }
+        console.log( xCenter[d.deelGedrag])
+        return xCenter[d.deelGedrag];
 	}))
 	.force('collision', d3.forceCollide().radius(function(d) {
 		return 15;
@@ -469,9 +469,10 @@ function ticked() {
 		.data(data)
 		.join('circle')
         .attr("r", 10)
-		// .style('fill', function(d) {
-		// 	return colorScale[d.category];
-		// })
+        //.attr("fill", "#ff0066")
+        .attr("fill", d => 
+            colorPicker(d)
+        )
 		.attr('cx', function(d) {
 			return d.x;
 		})
@@ -480,18 +481,16 @@ function ticked() {
 		});
 }
 
-
-
 // ColorPicker deelGedrag
 function colorPicker(d) {
-    if (d.deelGedrag == "Altijd") {
+    if (d.deelGedrag == 3) {
         return "#68E77A";
-    } else if (d.deelGedrag == "Vaak") {
+    } else if (d.deelGedrag == 0) {
         return "#FDDC80";
-    } else if (d.deelGedrag == "Soms") {
+    } else if (d.deelGedrag == 1) {
         return "#06B4FF";
     } else {
-        return "#D382FF"; // Nooit
+        return "#D382FF";    
     }
 };
 
