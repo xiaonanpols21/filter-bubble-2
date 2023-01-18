@@ -394,6 +394,11 @@ div.tooltip {
   pointer-events: none;
 }
 
+g {
+  -webkit-transform: translate(150px, 150px);
+          transform: translate(150px, 150px);
+}
+
 * {
   margin: 0px;
   padding: 0px;
