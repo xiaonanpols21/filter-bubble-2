@@ -9,6 +9,16 @@ g {
     transform: translate(150px, 150px);
 }
 
+.filter {
+    display: flex;
+    margin-left: auto;
+    font-size: 40px;
+    color: $white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 
 // Legenda
 .legenda-container {

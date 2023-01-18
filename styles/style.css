@@ -405,6 +405,18 @@ g {
           transform: translate(150px, 150px);
 }
 
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  font-size: 40px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .legenda-container {
   position: absolute;
   right: 50px;

@@ -2,7 +2,7 @@ import '../styles/style.css'
 import * as d3 from 'd3';
 import gsap from "gsap";
 
-// Data
+// Data D3
 const data = [
     {
       koppigheid: 'A 1-15',
@@ -405,7 +405,7 @@ function colorPicker(d) {
 
 // Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
 var xCenter = [-50, 300, 500, 800];
-var yCenter = [200, 0, 300, 100];
+var yCenter = [200, -50, 200, 100];
 
 d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(20))
@@ -416,7 +416,7 @@ d3.forceSimulation(data)
         return yCenter[d.gekozenTiktok];
 	}))
 	.force('collision', d3.forceCollide().radius(function(d) {
-		return 13;
+		return 25;
 	}))
 	.on('tick', ticked)
 ;
@@ -426,7 +426,7 @@ function ticked() {
 		.selectAll('circle')
 		.data(data)
 		.join('circle')
-        .attr("r", 10)
+        .attr("r", 20)
         .attr("fill", d => 
             colorPicker(d)
         )
@@ -437,3 +437,15 @@ function ticked() {
 			return d.y;
 		});
 };
+
+// Functions
+const legendaBtn = document.querySelector(".legenda-container button");
+const legenda = document.querySelector(".legenda");
+
+legenda.classList.add("none");
+
+function showLegenda() {
+    legenda.classList.toggle("show");
+}
+
+legendaBtn.addEventListener("click", showLegenda);
