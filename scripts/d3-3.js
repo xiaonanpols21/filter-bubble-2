@@ -392,20 +392,20 @@ const data = [
 
 // ColorPicker deelGedrag
 function colorPicker(d) {
-    if (d.deelGedrag == 3) {
+    if (d.deelGedrag == "Altijd") {
         return "#68E77A";
-    } else if (d.deelGedrag == 0) {
+    } else if (d.deelGedrag == "Vaak") {
         return "#FDDC80";
-    } else if (d.deelGedrag == 1) {
+    } else if (d.deelGedrag == "Soms") {
         return "#06B4FF";
     } else {
-        return "#D382FF";    
+        return "#D382FF"; // Nooit
     }
 };
 
 // Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
 var xCenter = [-50, 300, 500, 800];
-var yCenter = [300, 0, 350, 200];
+var yCenter = [200, 0, 300, 100];
 
 d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(20))
