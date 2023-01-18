@@ -11,6 +11,7 @@ const data = [
     schermtijd: '600 - 1800',
     gekozenTiktok: '3 eens 2 oneens',
     deelGedrag: "Vaak",
+    category: 0
   },
   {
     id: 2,
@@ -448,9 +449,8 @@ const data = [
 var width = 300, height = 300;
 
 var colorScale = ['orange', 'lightblue', '#B19CD9'];
-var xCenter = [100, 300, 500];
+var xCenter = [100, 300, 500, 700];
 
-/*
 var simulation = d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(5))
 	.force('x', d3.forceX().x(function(d) {
@@ -479,9 +479,23 @@ function ticked() {
 			return d.y;
 		});
 }
-*/
 
 
+
+// ColorPicker deelGedrag
+function colorPicker(d) {
+    if (d.deelGedrag == "Altijd") {
+        return "#68E77A";
+    } else if (d.deelGedrag == "Vaak") {
+        return "#FDDC80";
+    } else if (d.deelGedrag == "Soms") {
+        return "#06B4FF";
+    } else {
+        return "#D382FF"; // Nooit
+    }
+};
+
+/*
 
 d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(5))
@@ -496,7 +510,9 @@ function ticked() {
 		.selectAll('circle')
 		.data(data)
 		.join('circle')
-        .style('fill', '#aaa')
+        .attr("fill", d => 
+            colorPicker(d)
+        )
         .attr("r", 10)
 
 		.attr('cx', function(d) {
@@ -506,3 +522,4 @@ function ticked() {
 			return d.y
 		})
 }
+*/
