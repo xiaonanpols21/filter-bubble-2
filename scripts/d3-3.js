@@ -473,7 +473,7 @@ options.forEach((option) => {
 });
 
 // select the first option
-select.value = 'koppigheid';
+select.value = 'gekozenTiktok';
 input.appendChild(select);
   
   
@@ -505,24 +505,6 @@ const outputSVG = output
     .append('svg')
     .attr('viewBox', `0 0 ${width + (margin.left + margin.right)} ${height + (margin.top + margin.bottom)}`);
 
-// immediately add a defs block for the gradients used in the project
-// gradient for the outline of the circle
-const outputDefs = outputSVG
-    .append('defs');
-
-// linear gradients included for each planet
-// the idea is to have a color closely resembling the fill ultimately picked up by each circle
-const gradientsStroke = outputDefs
-    .selectAll('linearGradient')
-    .data(data)
-    .enter()
-    .append('linearGradient')
-    .attr('id', (d, i) => `gradient-stroke${i}`)
-    .attr('x1', '100%')
-    .attr('x2', '0%')
-    .attr('y1', '0%')
-    .attr('y2', '100%');
-  
 // group in which to plot the visualization
 const outputGroup = outputSVG
     .append('g')
