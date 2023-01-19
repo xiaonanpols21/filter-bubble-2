@@ -11,11 +11,22 @@ Play video's when video is on screen. Volume doesn't work
 // Variables
 const chooseGereedBtn = document.querySelector(".tiktok-vid button");
 const duikPopUp = document.querySelector(".duik-pop-up");
+const loading  = document.querySelector(".loading");
 
 // Duik Pop Up
 duikPopUp.classList.add("none");
 
 function showDuikPopUp() {
     duikPopUp.classList.remove("none");
+    setTimeout(function() {
+        loading.classList.remove("none");
+
+        setTimeout(function() {
+            // info screen
+        }, 3000);
+    }, 3000);
 }
 chooseGereedBtn.addEventListener("click", showDuikPopUp);
+
+// Loading
+loading.classList.add("none");
