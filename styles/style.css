@@ -499,6 +499,7 @@ g {
   border: 5px solid #F9C600;
   padding: 10px 20px;
   cursor: pointer;
+  color: black;
 }
 
 .f-inner-con .gereed:hover {
@@ -508,6 +509,10 @@ g {
 
 .f-inner-con .gereed:hover {
   color: #F9C600;
+}
+
+.f-inner-con .active {
+  background-color: #F9C600;
 }
 
 .legenda-container {

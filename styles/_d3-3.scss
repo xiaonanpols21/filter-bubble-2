@@ -66,12 +66,16 @@ g {
         border: 5px solid $yellow;
         padding: 10px 20px;
         cursor: pointer;
+        color: $black;
 
         &:hover {
             color: $yellow;
         }
     }
-    
+
+    .active {
+        background-color: $yellow;
+    }
 }
 
 // Legenda
