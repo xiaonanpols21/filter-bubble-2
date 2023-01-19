@@ -401,6 +401,52 @@ function updateKoppigheid(data, buttonPressed, whichBtn ) {
     };
 };
 
+function updateSchermtijd(data, buttonPressed, whichBtn ) {
+    // Koppigheid
+    let newData;
+    if (buttonPressed) {
+        if (whichBtn == 1) {
+            newData = data.filter(d => d.schermtijd == "1-3");
+        } else if (whichBtn == 2) {
+            newData = data.filter(d => d.schermtijd == "4-7");
+        } else if (whichBtn == 3) {
+            newData = data.filter(d => d.schermtijd == "8+");
+        } 
+    } else {
+        newData = data;
+    };
+
+    d3.forceSimulation(data)
+        .force('charge', d3.forceManyBody().strength(20))
+        .force('x', d3.forceX().x(function(d) {
+            return xCenter[d.gekozenTiktok];
+        }))
+        .force('y', d3.forceY().y(function(d) {
+            return yCenter[d.gekozenTiktok];
+        }))
+        .force('collision', d3.forceCollide().radius(function(d) {
+            return 25;
+        }))
+        .on('tick', ticked)
+    ;
+
+    function ticked() {
+        d3.select('.bubbles')
+            .selectAll('circle')
+            .data(newData)
+            .join('circle')
+            .attr("r", 20)
+            .attr("fill", d => 
+                colorPicker(d)
+            )
+            .attr('cx', function(d) {
+                return d.x;
+            })
+            .attr('cy', function(d) {
+                return d.y;
+            });
+    };
+};
 function updateDeelgedrag(data, buttonPressed, whichBtn ) {
     // Koppigheid
     let newData;
@@ -452,6 +498,7 @@ function updateDeelgedrag(data, buttonPressed, whichBtn ) {
 
 updateKoppigheid(data);
 updateDeelgedrag(data);
+updateSchermtijd(data);
 
 d3.selectAll("#koppigheid button")
 .on("click", e => {
@@ -461,6 +508,11 @@ d3.selectAll("#koppigheid button")
 d3.selectAll("#deelgedrag button")
 .on("click", e => {
     updateDeelgedrag(data, true, e.target.value);
+});
+
+d3.selectAll("#schermtijd button")
+.on("click", e => {
+    updateSchermtijd(data, true, e.target.value);
 });
 // Bron: https://codepen.io/pen
 
@@ -531,4 +583,24 @@ deelgedrag.addEventListener('click', (e) => {
     }
     
     prevBtn = e.target;
+});
+
+// Deelgedrag buttons
+let preBtn = null;
+
+const schermtijd = document.querySelector("#schermtijd");
+
+schermtijd.addEventListener('click', (e) => {
+    const isButton = e.target.nodeName === 'BUTTON'; 
+    if (!isButton) {
+        return;
+    }
+    
+    e.target.classList.add('active'); // Add .active CSS Class
+
+    if(preBtn !== null) {
+        preBtn.classList.remove('active');  // Remove .active CSS Class
+    }
+    
+    preBtn = e.target;
 });
