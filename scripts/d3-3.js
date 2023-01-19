@@ -352,7 +352,21 @@ function colorPicker(d) {
 var xCenter = [-50, 300, 500, 800];
 var yCenter = [200, -50, 200, 100];
 
-d3.forceSimulation(data)
+function update(data, buttonPressed, whichBtn ) {
+    let newData;
+    if (buttonPressed) {
+        if (whichBtn == 1) {
+            newData = data.filter(d => d.koppigheid == "1-15");
+            console.log(newData)
+        } else if (whichBtn == 2) {
+            newData = data.filter(d => d.koppigheid == "16-31");
+            console.log(newData)
+        }
+    } else {
+        newData = data;
+    };
+
+    d3.forceSimulation(data)
 	.force('charge', d3.forceManyBody().strength(20))
 	.force('x', d3.forceX().x(function(d) {
         return xCenter[d.gekozenTiktok];
@@ -366,22 +380,31 @@ d3.forceSimulation(data)
 	.on('tick', ticked)
 ;
 
-function ticked() {
-	d3.select('.bubbles')
-		.selectAll('circle')
-		.data(data)
-		.join('circle')
-        .attr("r", 20)
-        .attr("fill", d => 
-            colorPicker(d)
-        )
-		.attr('cx', function(d) {
-			return d.x;
-		})
-		.attr('cy', function(d) {
-			return d.y;
-		});
+    function ticked() {
+        d3.select('.bubbles')
+            .selectAll('circle')
+            .data(data)
+            .join('circle')
+            .attr("r", 20)
+            .attr("fill", d => 
+                colorPicker(d)
+            )
+            .attr('cx', function(d) {
+                return d.x;
+            })
+            .attr('cy', function(d) {
+                return d.y;
+            });
+    };
 };
+
+update(data);
+
+d3.selectAll("#koppigheid button")
+.on("click", e => {
+    update(data, true, e.target.value);
+});
+// Bron: https://codepen.io/pen
 
 // Functions
 const legendaBtn = document.querySelector(".legenda-container button");
