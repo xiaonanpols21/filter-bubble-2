@@ -493,7 +493,7 @@ function closeFilter() {
 }
 gereedBtn.addEventListener("click", closeFilter);
 
-// Active button
+// Koppigheid buttons
 let prevButton = null;
 
 const koppigheid = document.querySelector("#koppigheid");
@@ -511,4 +511,24 @@ koppigheid.addEventListener('click', (e) => {
     }
     
     prevButton = e.target;
+});
+
+// Deelgedrag buttons
+let prevBtn = null;
+
+const deelgedrag = document.querySelector("#deelgedrag");
+
+deelgedrag.addEventListener('click', (e) => {
+    const isButton = e.target.nodeName === 'BUTTON'; 
+    if (!isButton) {
+        return;
+    }
+    
+    e.target.classList.add('active'); // Add .active CSS Class
+
+    if(prevBtn !== null) {
+        prevBtn.classList.remove('active');  // Remove .active CSS Class
+    }
+    
+    prevBtn = e.target;
 });
