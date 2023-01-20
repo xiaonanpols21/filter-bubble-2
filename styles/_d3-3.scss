@@ -1,62 +1,81 @@
-.input select {
-    @include f18;
-    font-family: $font-stack;
-    padding: 10px 20px;
-    width: 250px;
-    text-align: left;
-    color: inherit;
-    border: 2px solid currentColor;
-    text-transform: uppercase;
-    line-height: 2;
+.body-sim {
+    h1 {
+        @include f26;
+        text-align: center;
+    }
+}
 
-    appearance: none;
-    position: relative;
-    background: url(../img/arrow.svg) no-repeat 90% center;
-    background-size: 10px 10px;
+g {
+    transform: translate(150px, 150px);
 }
-.input select option {
-    background: #1a1a1a;
-    color: inherit;
+
+.filter-container {
+    > button {
+        display: flex;
+        margin-left: auto;
+        font-size: 40px;
+        color: $white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+    }
 }
-/* cap the width of the wrapping container and horizontally center the element */
-.output svg {
-    width: 100%;
-    height: auto;
-    font-family: "Orbitron", sans-serif;
-}
-/* absolute position the tooltip */
-#tooltip {
+
+.f-inner-con {
     position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.25s ease-out;
-    padding: 1rem 1.5rem;
-    line-height: 2;
-    background: #fff;
-    color: #222;
-    pointer-events: none;
-    max-width: 350px;
-    display: grid;
-    /* display the information in a grid
-    three columns, the first of which stretches to occupy the available space
-    */
-    grid-template-columns: 1fr auto auto;
-    grid-gap: 0.25rem;
-    align-items: center;
-}
-#tooltip .planet {
-    font-size: 1.25rem;
-}
-#tooltip .year,
-#tooltip .medium {
-    font-size: 0.9rem;
-}
-#tooltip .medium:before {
-    content: "|";
-}
-/* have the source spread to cover the entirety of the second row */
-#tooltip .source {
-    grid-column: span 3;
+    right: 50px;
+    top: 130px;
+    padding: 20px;
+    width: 400px;
+    background-color: $white;
+    border-radius: 5px;
+    border: 5px solid $yellow;
+    color: $black;
+
+    > li {
+        @include flex(column, 5px);
+    }
+
+    h2 {
+        margin: 10px 0px -5px 0px;
+        @include f18;
+    }
+
+    p {
+        @include f16;
+    }
+
+    button {
+        @include btn2;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .gereed {
+        @include btn1;
+        margin-top: 20px;
+        background-color: $yellow;
+        border: 5px solid $yellow;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: $black;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    .active {
+        background-color: $yellow;
+    }
 }
 
 // Legenda

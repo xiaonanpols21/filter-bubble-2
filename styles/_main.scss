@@ -123,4 +123,34 @@
     }
 }
 
+.uitleg-sim {
+    @include flex(column, 50px);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px;
+    background-color: $black;
 
+    h2 {
+        @include f42;
+        font-weight: 300;
+        width: 1000px;
+    }
+
+    a {
+        display: block;
+        @include btn1;
+        width: 150px;
+        text-align: center;
+    }
+
+    img {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+}

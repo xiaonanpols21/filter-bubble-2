@@ -9,34 +9,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 class="visually-hidden">Simulator</h1>
-    <main>
-        <!-- div describing the select element to change the output -->
-        <div class="input">
-            <!-- in the script add one option for each property -->
-            <!-- <select>
-                <option></option>
-            </select> -->
-        </div>
-    
-        <!-- div nesting the d3 powered visualization -->
-        <div class="output"></div>
-
-        <div class="legenda-container">
-            <button>Legenda</button>
-            <section class="legenda">
-                <h2>Hoe vaak is de kans dat ik iets deel?</h2>
-                <ul>
-                    <li>Altijd</li>
-                    <li>Vaak</li>
-                    <li>Soms</li>
-                    <li>Nooit</li>
+<body class="body-sim">
+    <h1>Zie nu zelf wat er gebeurt en filter voor veranderingen</h1>
+    <section class="filter-container">
+        <button class="filter"><i class="fa-solid fa-filter"></i></button>
+        <ul class="f-inner-con">
+            <li>
+                <h2>Koppigheid</h2>
+                <p>De kans dat  gebruikers TikToks leuk vinden.</p>
+                <ul id="koppigheid">
+                    <li><button value="1">1-15</button></li>
+                    <li><button value="2">16-31</button></li>
+                    <li><button value="3">32-45</button></li>
+                    <li><button value="4">46-50</button></li>
                 </ul>
-            </section>
-        </div>
-    </main>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js'></script>
+            </li>
+            <li>
+                <h2>Deelgedrag</h2>
+                <p>De kans dat gebruikers TikToks delen</p>
+                <ul id="deelgedrag">
+                    <li><button value="1">Altijd</button></li>
+                    <li><button value="2">Vaak</button></li>
+                    <li><button value="3">Soms</button></li>
+                    <li><button value="4">Nooit</button></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Schermtijd op TikTok</h2>
+                <p>In uren</p>
+                <ul id="schermtijd">
+                    <li><button value="1">1-3</button></li>
+                    <li><button value="2">4-7</button></li>
+                    <li><button value="3">8+</button></li>
+                </ul>
+            </li>
+            <li><button class="gereed">Gereed</button></li>
+        </ul>
+    </section>
+    <svg viewBox="0 0 1200 500">
+        <g class="bubbles"></g>
+    </svg>
+
+    <div class="legenda-container">
+        <button>Legenda</button>
+        <section class="legenda">
+            <h2>Hoe vaak is de kans dat ik iets deel?</h2>
+            <ul>
+                <li>Altijd</li>
+                <li>Vaak</li>
+                <li>Soms</li>
+                <li>Nooit</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c24c386355.js" crossorigin="anonymous"></script>
     <script type="module" src="./scripts/d3-3.js"></script>
 </body>
 </html>
