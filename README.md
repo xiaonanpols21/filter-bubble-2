@@ -2,6 +2,8 @@
 
 ![cover](https://github.com/xiaonanpols21/tech-track-22-23/blob/main/images/wiki/cover.jpg)
 
+Live demo: [Filter Bubble Vercel]()
+
 Here is our project for Information Design Responsible IT Filter Bubble. Read [Product Biography](https://www.notion.so/Filter-bubble-ecdfb2ec22ea4e55801230b0a897bdc0) for further information.
 
 ## Who are you?
