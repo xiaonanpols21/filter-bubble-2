@@ -524,6 +524,7 @@ d3.selectAll("#koppigheid button")
 // });
 // Bron: https://codepen.io/pen
 
+
 // Functions
 const legendaBtn = document.querySelector(".legenda-container button");
 const legenda = document.querySelector(".legenda");
