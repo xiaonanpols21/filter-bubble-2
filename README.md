@@ -26,6 +26,7 @@ Like TikToks and see the consequences. Filter on themes to see the changes.
 
 Before you install the application, make sure to have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Node](https://nodejs.org/en/download/) and [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your computer.
 
+
 ``` bash
 
 git clone https://github.com/xiaonanpols21/filter-bubble-2
