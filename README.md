@@ -1,6 +1,6 @@
 # filter-bubble-2
 
-![cover](https://github.com/xiaonanpols21/tech-track-22-23/blob/main/images/wiki/cover.jpg)
+![cover](https://github.com/xiaonanpols21/filter-bubble-2/blob/main/public/img/readme.jpg)
 
 Live demo: [Filter Bubble Vercel]()
 
