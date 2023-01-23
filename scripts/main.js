@@ -27,6 +27,6 @@ function showDuikPopUp() {
         setTimeout(function() {
             uitleg.classList.remove("none");
         }, 3000);
-    }, 3000);
+    }, 2000);
 }
 chooseGereedBtn.addEventListener("click", showDuikPopUp);

@@ -5,98 +5,100 @@ import gsap from "gsap";
 // Data D3
 const data = [
     {
-      koppigheid: '1-15',
+      koppigheid: '16-31',
       schermtijd: '1-3',
       gekozenTiktok: 0,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 0,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 1,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: '1-15',
       schermtijd: '8+',
       gekozenTiktok: 0,
+      deelGedrag: "Altijd",
+    },
+    {
+      koppigheid: '32-45',
+      schermtijd: '8+',
+      gekozenTiktok: 1,
+      deelGedrag: "Altijd",
+    },
+    {
+      koppigheid: '46-50',
+      schermtijd: '8+',
+      gekozenTiktok: 1,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '1-3',
+      gekozenTiktok: 2,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '32-45',
+      schermtijd: '1-3',
+      gekozenTiktok: 2,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '16-31',
+      schermtijd: '1-3',
+      gekozenTiktok: 1,
+      deelGedrag: "Vaak",
+    },
+    {
+      koppigheid: '46-50',
+      schermtijd: '8+',
+      gekozenTiktok: 1,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '8+',
+      gekozenTiktok: 2,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '16-31',
+      schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '32-45',
+      schermtijd: '1-3',
+      gekozenTiktok: 3,
+      deelGedrag: "Vaak",
+    },
+    {
+      koppigheid: '32-45',
+      schermtijd: '1-3',
+      gekozenTiktok: 3,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '46-50',
+      schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '1-3',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '8+',
+      gekozenTiktok: 0,
       deelGedrag: "Nooit",
     },
     {
       koppigheid: '16-31',
       schermtijd: '8+',
       gekozenTiktok: 2,
-      deelGedrag: "Nooit",
+      deelGedrag: "Vaak",
     },
     {
       koppigheid: '32-45',
@@ -112,13 +114,12 @@ const data = [
     },
     {
       koppigheid: '46-50',
-      schermtijd: '1-3',
+      schermtijd: '4-7',
       gekozenTiktok: 2,
-      deelGedrag: "Nooit",
+      deelGedrag: "Soms",
     },
     {
       koppigheid: '1-15',
-      source: 'Worldwar',
       schermtijd: '1-3',
       gekozenTiktok: 1,
       deelGedrag: "Altijd",
@@ -149,9 +150,9 @@ const data = [
     },
     {
       koppigheid: '32-45',
-      schermtijd: '1-3',
+      schermtijd: '4-7',
       gekozenTiktok: 2,
-      deelGedrag: "Altijd",
+      deelGedrag: "Soms",
     },
     {
       koppigheid: '46-50',
@@ -185,7 +186,7 @@ const data = [
     },
     {
       koppigheid: '16-31',
-      schermtijd: '4-7',
+      schermtijd: '8+',
       gekozenTiktok: 0,
       deelGedrag: "Soms",
     },
@@ -221,15 +222,15 @@ const data = [
     },
     {
       koppigheid: '46-50',
-      schermtijd: '4-7',
+      schermtijd: '1-3',
       gekozenTiktok: 0,
-      deelGedrag: "Vaak",
+      deelGedrag: "Soms",
     },
     {
       koppigheid: '1-15',
       schermtijd: '4-7',
       gekozenTiktok: 1,
-      deelGedrag: "Vaak",
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: '46-50',
@@ -263,9 +264,9 @@ const data = [
     },
     {
       koppigheid: '32-45',
-      schermtijd: '8+',
+      schermtijd: '1-3',
       gekozenTiktok: 2,
-      deelGedrag: "Vaak",
+      deelGedrag: "Altijd",
     },
     {
       koppigheid: '46-50',
@@ -329,9 +330,33 @@ const data = [
     },
     {
       koppigheid: '16-31',
+      schermtijd: '1-3',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '16-31',
       schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '46-50',
+      schermtijd: '8+',
       gekozenTiktok: 3,
       deelGedrag: "Altijd",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Soms",
+    },
+    {
+      koppigheid: '16-31',
+      schermtijd: '8+',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
     },
 ];
 
@@ -357,18 +382,18 @@ function updateKoppigheid(data) {
     // Deze functie koppelen we als on click event handler aan alle radio buutons
     let newData = [];
 
-    if (document.querySelector("#fav_language_form").fav_language.value) {
-        newData = data.filter(d => d.koppigheid == document.querySelector("#fav_language_form").fav_language.value);
+    if (document.querySelector("#koppigheidForm").koppigheidName.value) {
+        newData = data.filter(d => d.koppigheid == document.querySelector("#koppigheidForm").koppigheidName.value);
         console.log(newData);
     } 
     
-    if (document.querySelector("#deelgedrag_form").deelgedrag.value) {
-        newData = newData.filter(d => d.deelGedrag == document.querySelector("#deelgedrag_form").deelgedrag.value);
+    if (document.querySelector("#deelgedragForm").deelgedragName.value) {
+        newData = newData.filter(d => d.deelGedrag == document.querySelector("#deelgedragForm").deelgedragName.value);
         console.log(newData);
     } 
     
-    if (document.querySelector("#schermtijd_form").schermtijdhtml.value) {
-        newData = newData.filter(d => d.schermtijd == document.querySelector("#schermtijd_form").schermtijdhtml.value);
+    if (document.querySelector("#schermtijdForm").schermtijdName.value) {
+        newData = newData.filter(d => d.schermtijd == document.querySelector("#schermtijdForm").schermtijdName.value);
         console.log(newData);
     }
 
