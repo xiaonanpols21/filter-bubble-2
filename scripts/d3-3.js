@@ -352,10 +352,36 @@ function colorPicker(d) {
 var xCenter = [-50, 300, 500, 800];
 var yCenter = [200, -50, 200, 100];
 
-function updateKoppigheid(data, buttonPressed, whichBtn ) {
+function updateKoppigheid(data) {
 
-    // Koppigheid
+    // Deze functie koppelen we als on click event handler aan alle radio buutons
     let newData = [];
+
+    if (document.querySelector("#fav_language_form").fav_language.value) {
+        newData = data.filter(d => d.koppigheid == document.querySelector("#fav_language_form").fav_language.value);
+        console.log(newData);
+    } 
+    
+    if (document.querySelector("#deelgedrag_form").deelgedrag.value) {
+        newData = newData.filter(d => d.deelGedrag == document.querySelector("#deelgedrag_form").deelgedrag.value);
+        console.log(newData);
+    } 
+    
+    if (document.querySelector("#schermtijd_form").schermtijdhtml.value) {
+        newData = newData.filter(d => d.schermtijd == document.querySelector("#schermtijd_form").schermtijdhtml.value);
+        console.log(newData);
+    }
+
+    if (newData.length == 0) {
+        newData = data;
+    }
+    
+
+    
+
+    
+/*
+    // Koppigheid
     // Zoek alle knoppen met de class 'active'. Voor elke knop, kijken we naar het label en gebruiken we dat als filter.
     // Doordat we .push gebruiken breiden we de newData array telkens uit met meer data als er meer knoppen actief zijn
 
@@ -373,10 +399,11 @@ function updateKoppigheid(data, buttonPressed, whichBtn ) {
     if (newData.length == 0) {
         newData = data; 
     }
-    
+    */
+
     console.log(newData);
 
-    d3.forceSimulation(data)
+    d3.forceSimulation(newData)
         .force('charge', d3.forceManyBody().strength(20))
         .force('x', d3.forceX().x(function(d) {
             return xCenter[d.gekozenTiktok];
@@ -507,10 +534,10 @@ updateKoppigheid(data);
 // updateDeelgedrag(data);
 // updateSchermtijd(data);
 
-d3.selectAll("#koppigheid button")
+d3.selectAll("section.filter-container input[type='radio']")
 .on("click", e => {
-    updateKoppigheid(data, true, e.target.value);
-    e.target.classList.toggle("active");
+    updateKoppigheid(data);
+    //e.target.classList.toggle("active");
 });
 
 // d3.selectAll("#deelgedrag button")
