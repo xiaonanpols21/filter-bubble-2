@@ -559,7 +559,24 @@ g {
   line-height: 28px;
 }
 
-.f-inner-con button {
+.f-inner-con ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.f-inner-con input[type="radio"] {
+  display: none;
+}
+
+.f-inner-con input[type="radio"]:checked + label {
+  background-color: #F9C600;
+}
+
+.f-inner-con label {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   line-height: 28px;
@@ -569,19 +586,24 @@ g {
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.f-inner-con button:hover {
+.f-inner-con label:hover {
   background-color: #F9C600;
 }
 
-.f-inner-con ul {
+.f-inner-con form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .f-inner-con .gereed {
@@ -613,10 +635,6 @@ g {
 
 .f-inner-con .gereed:hover {
   color: #F9C600;
-}
-
-.f-inner-con .active {
-  background-color: #F9C600;
 }
 
 .legenda-container {

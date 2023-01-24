@@ -358,6 +358,42 @@ const data = [
       gekozenTiktok: 3,
       deelGedrag: "Nooit",
     },
+    {
+      koppigheid: '32-45',
+      schermtijd: '8+',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '32-45',
+      schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Altijd",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '8+',
+      gekozenTiktok: 3,
+      deelGedrag: "Vaak",
+    },
+    {
+      koppigheid: '1-15',
+      schermtijd: '4-7',
+      gekozenTiktok: 3,
+      deelGedrag: "Nooit",
+    },
+    {
+      koppigheid: '16-13',
+      schermtijd: '8+',
+      gekozenTiktok: 3,
+      deelGedrag: "Altijd",
+    },
+    {
+      koppigheid: '16-13',
+      schermtijd: '8+',
+      gekozenTiktok: 3,
+      deelGedrag: "Altijd",
+    },
 ];
 
 // ColorPicker deelGedrag
@@ -377,9 +413,8 @@ function colorPicker(d) {
 var xCenter = [-50, 300, 500, 800];
 var yCenter = [200, -50, 200, 100];
 
-function updateKoppigheid(data) {
-
-    // Deze functie koppelen we als on click event handler aan alle radio buutons
+function filterFunction(data) {
+    // Data showen met filteren
     let newData = [];
 
     if (document.querySelector("#koppigheidForm").koppigheidName.value) {
@@ -400,33 +435,6 @@ function updateKoppigheid(data) {
     if (newData.length == 0) {
         newData = data;
     }
-    
-
-    
-
-    
-/*
-    // Koppigheid
-    // Zoek alle knoppen met de class 'active'. Voor elke knop, kijken we naar het label en gebruiken we dat als filter.
-    // Doordat we .push gebruiken breiden we de newData array telkens uit met meer data als er meer knoppen actief zijn
-
-    if (buttonPressed) {
-        document.querySelectorAll("#koppigheid button.active").forEach(button => {
-            const dataFilter = data.filter(d => d.koppigheid == button.innerText);
-            console.log(dataFilter);
-            newData.push(dataFilter);
-        })
-    } else {
-        newData = data;
-    };
-
-    // Zijn er geen knoppen met de class active? Dan blijft newData leeg en vullen we het met data:
-    if (newData.length == 0) {
-        newData = data; 
-    }
-    */
-
-    console.log(newData);
 
     d3.forceSimulation(newData)
         .force('charge', d3.forceManyBody().strength(20))
@@ -460,122 +468,12 @@ function updateKoppigheid(data) {
     };
 };
 
-// function updateSchermtijd(data, buttonPressed, whichBtn ) {
-//     // Koppigheid
-//     let newData;
-//     if (buttonPressed) {
-//         if (whichBtn == 1) {
-//             newData = data.filter(d => d.schermtijd == "1-3");
-//         } else if (whichBtn == 2) {
-//             newData = data.filter(d => d.schermtijd == "4-7");
-//         } else if (whichBtn == 3) {
-//             newData = data.filter(d => d.schermtijd == "8+");
-//         } 
-//     } else {
-//         newData = data;
-//     };
-
-//     d3.forceSimulation(data)
-//         .force('charge', d3.forceManyBody().strength(20))
-//         .force('x', d3.forceX().x(function(d) {
-//             return xCenter[d.gekozenTiktok];
-//         }))
-//         .force('y', d3.forceY().y(function(d) {
-//             return yCenter[d.gekozenTiktok];
-//         }))
-//         .force('collision', d3.forceCollide().radius(function(d) {
-//             return 25;
-//         }))
-//         .on('tick', ticked)
-//     ;
-
-//     function ticked() {
-//         d3.select('.bubbles')
-//             .selectAll('circle')
-//             .data(newData)
-//             .join('circle')
-//             .attr("r", 20)
-//             .attr("fill", d => 
-//                 colorPicker(d)
-//             )
-//             .attr('cx', function(d) {
-//                 return d.x;
-//             })
-//             .attr('cy', function(d) {
-//                 return d.y;
-//             });
-//     };
-// };
-// function updateDeelgedrag(data, buttonPressed, whichBtn ) {
-//     // Koppigheid
-//     let newData;
-//     if (buttonPressed) {
-//         if (whichBtn == 1) {
-//             newData = data.filter(d => d.deelGedrag == "Altijd");
-//         } else if (whichBtn == 2) {
-//             newData = data.filter(d => d.deelGedrag == "Vaak");
-//         } else if (whichBtn == 3) {
-//             newData = data.filter(d => d.deelGedrag == "Soms");
-//         } else if (whichBtn == 4) {
-//             newData = data.filter(d => d.deelGedrag == "Nooit");
-//         }
-//     } else {
-//         newData = data;
-//     };
-
-//     d3.forceSimulation(data)
-//         .force('charge', d3.forceManyBody().strength(20))
-//         .force('x', d3.forceX().x(function(d) {
-//             return xCenter[d.gekozenTiktok];
-//         }))
-//         .force('y', d3.forceY().y(function(d) {
-//             return yCenter[d.gekozenTiktok];
-//         }))
-//         .force('collision', d3.forceCollide().radius(function(d) {
-//             return 25;
-//         }))
-//         .on('tick', ticked)
-//     ;
-
-//     function ticked() {
-//         d3.select('.bubbles')
-//             .selectAll('circle')
-//             .data(newData)
-//             .join('circle')
-//             .attr("r", 20)
-//             .attr("fill", d => 
-//                 colorPicker(d)
-//             )
-//             .attr('cx', function(d) {
-//                 return d.x;
-//             })
-//             .attr('cy', function(d) {
-//                 return d.y;
-//             });
-//     };
-// };
-
-updateKoppigheid(data);
-// updateDeelgedrag(data);
-// updateSchermtijd(data);
+filterFunction(data);
 
 d3.selectAll("section.filter-container input[type='radio']")
 .on("click", e => {
-    updateKoppigheid(data);
-    //e.target.classList.toggle("active");
+    filterFunction(data);
 });
-
-// d3.selectAll("#deelgedrag button")
-// .on("click", e => {
-//     updateDeelgedrag(data, true, e.target.value);
-// });
-
-// d3.selectAll("#schermtijd button")
-// .on("click", e => {
-//     updateSchermtijd(data, true, e.target.value);
-// });
-// Bron: https://codepen.io/pen
-
 
 // Functions
 const legendaBtn = document.querySelector(".legenda-container button");

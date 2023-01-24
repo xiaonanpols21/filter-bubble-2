@@ -49,15 +49,32 @@ g {
         @include f16;
     }
 
-    button {
-        @include btn2;
-    }
-
     ul {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
+
+    input[type="radio"] {
+        display: none;
+    }  
+    
+    input[type="radio"]:checked +label {
+        background-color: $yellow;
+    }
+
+    label {
+        @include btn2;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    form {
+        @include flex(row, 10px);
+        margin-bottom: 10px;
+    }
+
+    
 
     .gereed {
         @include btn1;
@@ -71,10 +88,6 @@ g {
         &:hover {
             color: $yellow;
         }
-    }
-
-    .active {
-        background-color: $yellow;
     }
 }
 
@@ -103,7 +116,6 @@ g {
         }
     }
 }
-
 
 .legenda {
     position: absolute;
