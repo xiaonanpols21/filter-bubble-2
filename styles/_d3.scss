@@ -59,6 +59,7 @@ g {
         display: none;
     }  
     
+    // Bron: https://www.w3docs.com/snippets/css/how-to-style-the-selected-label-of-a-radio-button.html
     input[type="radio"]:checked +label {
         background-color: $yellow;
     }
@@ -177,5 +178,36 @@ g {
                 }
             }
         }
+    }
+}
+
+.eind-pop-up {
+    @include flex(column, 10px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background-color: $yellow;
+    color: $black;
+
+    h2 {
+        @include f34;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    img {
+        order: -1;
+    }
+
+    button {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 50px;
     }
 }
