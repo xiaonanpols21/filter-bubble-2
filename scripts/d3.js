@@ -102,17 +102,18 @@ function filterFunction(data) {
 
     d3.select('.jij')
         .append('circle')
-        .attr('cx', '220')
+        .attr('cx', '240')
         .attr('cy', '0')
-        .attr('r', 20)
+        .attr('r', 10)
         .style('fill', 'white');
 
     d3.selectAll('.jij')
         .append('text')
         .text("Jij")
-        .attr('x', 213)
+        .attr('x', 235)
         .attr('y', 5)
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("font-size", "13px");
     
 };
 
