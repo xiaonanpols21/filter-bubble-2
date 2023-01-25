@@ -1,4 +1,5 @@
-import '../styles/style.css'
+import '../styles/style.css';
+import * as v from "./variables";
 
 /*
 Play vid if vid is on screen
@@ -6,25 +7,19 @@ Bron: https://benfrain.com/automatically-play-and-pause-video-as-it-enters-and-l
 Play video's when video is on screen. Volume doesn't work
 */
 
-// Variables
-const chooseGereedBtn = document.querySelector(".tiktok-vid button");
-const duikPopUp = document.querySelector(".duik-pop-up");
-const loading  = document.querySelector(".loading");
-const uitleg = document.querySelector(".uitleg-sim");
-
 // Duik Pop Up
-duikPopUp.classList.add("none");
-loading.classList.add("none");
-uitleg.classList.add("none");
+v.duikPopUp.classList.add("none");
+v.loading.classList.add("none");
+v.uitleg.classList.add("none");
 
 function showDuikPopUp() {
-    duikPopUp.classList.remove("none");
+    v.duikPopUp.classList.remove("none");
     setTimeout(function() {
-        loading.classList.remove("none");
+        v.loading.classList.remove("none");
 
         setTimeout(function() {
-            uitleg.classList.remove("none");
+            v.uitleg.classList.remove("none");
         }, 3000);
     }, 2000);
 }
-chooseGereedBtn.addEventListener("click", showDuikPopUp);
+v.chooseGereedBtn.addEventListener("click", showDuikPopUp);

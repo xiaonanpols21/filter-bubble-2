@@ -2,8 +2,10 @@ import '../styles/style.css'
 import * as d3 from 'd3';
 import gsap from "gsap";
 
-// Get data
+// Get files
 import * as d from "../public/data/data.js";
+import * as v from "./variables";
+import * as f from "./func";
    
 // ColorPicker deelGedrag
 function colorPicker(d) {
@@ -19,8 +21,6 @@ function colorPicker(d) {
 };
 
 // Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
-const xCenter = [-50, 100, 400, 800];
-const yCenter = [200, -50, 100, 100];
 
 function filterFunction(data) {
     // Data showen met filteren
@@ -45,10 +45,10 @@ function filterFunction(data) {
     d3.forceSimulation(newData)
         .force('charge', d3.forceManyBody().strength(20))
         .force('x', d3.forceX().x (d => {
-            return xCenter[d.gekozenTiktok];
+            return v.xCenter[d.gekozenTiktok];
         }))
         .force('y', d3.forceY().y (d => {
-            return yCenter[d.gekozenTiktok];
+            return v.yCenter[d.gekozenTiktok];
         }))
         .force('collision', d3.forceCollide().radius(d => {
             return 15;
@@ -122,64 +122,3 @@ d3.selectAll("section.filter-container input[type='radio']")
 .on("click", e => {
     filterFunction(d.data);
 });
-
-// Functions
-const legendaBtn = document.querySelector(".legenda-container button");
-const legenda = document.querySelector(".legenda");
-
-const filterBtn = document.querySelector(".filter");
-const filter = document.querySelector(".f-inner-con");
-const gereedBtn = document.querySelector(".gereed");
-const gereed2Btn = document.querySelector(".gereed-2");
-
-const popUp = document.querySelector(".eind-pop-up");
-const cross = document.querySelector(".eind-pop-up button");
-
-// Legenda
-legenda.classList.add("none");
-
-function showLegenda() {
-    legenda.classList.toggle("show");
-}
-legendaBtn.addEventListener("click", showLegenda);
-
-// Filter
-filter.classList.add("none");
-gereed2Btn.classList.add("none");
-
-function showFilter() {
-    filter.classList.add("show");
-
-    gsap.to(".jij", {
-        opacity: 0,
-        duration: 1
-    });
-}
-filterBtn.addEventListener("click", showFilter);
-
-function closeFilter() {
-    filter.classList.remove("show");
-
-    setTimeout(function() {
-        popUp.classList.remove("none");
-    }, 2000);
-
-    gereedBtn.classList.add("none");
-    gereed2Btn.classList.remove("none");
-    
-}
-gereedBtn.addEventListener("click", closeFilter);
-
-function closeFilter2() {
-    filter.classList.remove("show");
-}
-gereed2Btn.addEventListener("click", closeFilter2);
-
-// Popup 
-popUp.classList.add("none");
-
-function closePopup() {
-    popUp.classList.add("none");
-}
-cross.addEventListener("click", closePopup);
-
