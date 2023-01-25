@@ -75,9 +75,7 @@ g {
         margin-bottom: 10px;
     }
 
-    
-
-    .gereed {
+    .gereed, .gereed-2 {
         @include btn1;
         margin-top: 20px;
         background-color: $yellow;
@@ -203,11 +201,25 @@ g {
     }
 
     button {
+        display: block;
         position: absolute;
         right: 30px;
         top: 20px;
         background-color: transparent;
         border: none;
         font-size: 50px;
+        color: $black;
     }
+}
+
+.tooltip {
+    position: absolute;
+    padding: 15px;
+    width: fit-content;
+    background-color: $white;
+    border-radius: 10px 10px 10px 0px;
+    color: $black;
+    opacity: 0;
+    line-height: 30px;
+    pointer-events: none;
 }

@@ -2,400 +2,9 @@ import '../styles/style.css'
 import * as d3 from 'd3';
 import gsap from "gsap";
 
-// Data D3
-const data = [
-    {
-      koppigheid: '16-31',
-      schermtijd: '1-3',
-      gekozenTiktok: 0,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 0,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '1-3',
-      gekozenTiktok: 1,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 0,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '8+',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 0,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 1,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 0,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: 'Noit',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 1,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 0,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '8+',
-      gekozenTiktok: 0,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: "32-45",
-      schermtijd: '8+',
-      gekozenTiktok: 1,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 2,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 0,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 1,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 1,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '4-7',
-      gekozenTiktok: 0,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '1-3',
-      gekozenTiktok: 2,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '4-7',
-      gekozenTiktok: 1,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '8+',
-      gekozenTiktok: 0,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '1-3',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '46-50',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Soms",
-    },
-    {
-      koppigheid: '16-31',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '32-45',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Vaak",
-    },
-    {
-      koppigheid: '1-15',
-      schermtijd: '4-7',
-      gekozenTiktok: 3,
-      deelGedrag: "Nooit",
-    },
-    {
-      koppigheid: '16-13',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Altijd",
-    },
-    {
-      koppigheid: '16-13',
-      schermtijd: '8+',
-      gekozenTiktok: 3,
-      deelGedrag: "Altijd",
-    },
-];
-
+// Get data
+import * as d from "../public/data/data.js";
+   
 // ColorPicker deelGedrag
 function colorPicker(d) {
     if (d.deelGedrag == "Altijd") {
@@ -410,8 +19,8 @@ function colorPicker(d) {
 };
 
 // Bron: https://codepen.io/xiao-nan-pols/pen/JjBrVWZ?editors=1010
-var xCenter = [-50, 300, 500, 800];
-var yCenter = [200, -50, 200, 100];
+const xCenter = [-50, 100, 400, 800];
+const yCenter = [200, -50, 100, 100];
 
 function filterFunction(data) {
     // Data showen met filteren
@@ -419,17 +28,14 @@ function filterFunction(data) {
 
     if (document.querySelector("#koppigheidForm").koppigheidName.value) {
         newData = data.filter(d => d.koppigheid == document.querySelector("#koppigheidForm").koppigheidName.value);
-        console.log(newData);
     } 
     
     if (document.querySelector("#deelgedragForm").deelgedragName.value) {
         newData = newData.filter(d => d.deelGedrag == document.querySelector("#deelgedragForm").deelgedragName.value);
-        console.log(newData);
     } 
     
     if (document.querySelector("#schermtijdForm").schermtijdName.value) {
         newData = newData.filter(d => d.schermtijd == document.querySelector("#schermtijdForm").schermtijdName.value);
-        console.log(newData);
     }
 
     if (newData.length == 0) {
@@ -438,14 +44,14 @@ function filterFunction(data) {
 
     d3.forceSimulation(newData)
         .force('charge', d3.forceManyBody().strength(20))
-        .force('x', d3.forceX().x(function(d) {
+        .force('x', d3.forceX().x (d => {
             return xCenter[d.gekozenTiktok];
         }))
-        .force('y', d3.forceY().y(function(d) {
+        .force('y', d3.forceY().y (d => {
             return yCenter[d.gekozenTiktok];
         }))
-        .force('collision', d3.forceCollide().radius(function(d) {
-            return 25;
+        .force('collision', d3.forceCollide().radius(d => {
+            return 15;
         }))
         .on('tick', ticked)
     ;
@@ -455,30 +61,45 @@ function filterFunction(data) {
             .selectAll('circle')
             .data(newData)
             .join('circle')
-            .attr("r", 20)
+            .attr("r", 10)
             .attr("fill", d => 
                 colorPicker(d)
             )
-            .attr('cx', function(d) {
+            .attr('cx', d => {
                 return d.x;
             })
-            .attr('cy', function(d) {
+            .attr('cy', d => {
                 return d.y;
-            });
+            })
+
+            .on("mouseover", (e, d) => {
+                d3.select(".tooltip")
+                .html(`
+                    <strong>Koppgheid:</strong> ${d.koppigheid}</br>
+                    <strong>Deelgedrag:</strong> ${d.deelGedrag}</br>
+                    <strong>Schermtijd:</strong> ${d.schermtijd}</br>
+                `)
+                .transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("font-size", "18px")
+            })
         
-        /*
-        d3.select('.bubbles circle:first-of-type')
-            .append('text')
-            .text("Jij")
-            .attr('x', 213)
-            .attr('y', 5)
-            .attr("fill", "white")      
-            .style("font", 
-            "14px");
-        */
+            .on("mousemove", e =>
+                d3
+                .select(".tooltip")
+                .style("left", `${e.pageX + -0}px`)
+                .style("top", `${e.pageY + -130}px`)
+            )
+        
+            .on("mouseout", e => 
+                d3.
+                select(".tooltip")
+                .style("opacity", 0));
+            // Bron: https://codepen.io/vijnv/pen/RwJKBeO?editors=1010
+            ; 
     };
 
-    
     d3.select('.jij')
         .append('circle')
         .attr('cx', '220')
@@ -495,11 +116,11 @@ function filterFunction(data) {
     
 };
 
-filterFunction(data);
+filterFunction(d.data);
 
 d3.selectAll("section.filter-container input[type='radio']")
 .on("click", e => {
-    filterFunction(data);
+    filterFunction(d.data);
 });
 
 // Functions
@@ -509,6 +130,7 @@ const legenda = document.querySelector(".legenda");
 const filterBtn = document.querySelector(".filter");
 const filter = document.querySelector(".f-inner-con");
 const gereedBtn = document.querySelector(".gereed");
+const gereed2Btn = document.querySelector(".gereed-2");
 
 const popUp = document.querySelector(".eind-pop-up");
 const cross = document.querySelector(".eind-pop-up button");
@@ -523,6 +145,7 @@ legendaBtn.addEventListener("click", showLegenda);
 
 // Filter
 filter.classList.add("none");
+gereed2Btn.classList.add("none");
 
 function showFilter() {
     filter.classList.add("show");
@@ -540,9 +163,17 @@ function closeFilter() {
     setTimeout(function() {
         popUp.classList.remove("none");
     }, 2000);
+
+    gereedBtn.classList.add("none");
+    gereed2Btn.classList.remove("none");
     
 }
 gereedBtn.addEventListener("click", closeFilter);
+
+function closeFilter2() {
+    filter.classList.remove("show");
+}
+gereed2Btn.addEventListener("click", closeFilter2);
 
 // Popup 
 popUp.classList.add("none");
@@ -551,3 +182,4 @@ function closePopup() {
     popUp.classList.add("none");
 }
 cross.addEventListener("click", closePopup);
+

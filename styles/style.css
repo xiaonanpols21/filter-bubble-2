@@ -606,7 +606,7 @@ g {
   margin-bottom: 10px;
 }
 
-.f-inner-con .gereed {
+.f-inner-con .gereed, .f-inner-con .gereed-2 {
   font-size: 20px;
   line-height: 32px;
   font-weight: bold;
@@ -628,12 +628,12 @@ g {
   color: black;
 }
 
-.f-inner-con .gereed:hover {
+.f-inner-con .gereed:hover, .f-inner-con .gereed-2:hover {
   background-color: transparent;
   color: #ff0050;
 }
 
-.f-inner-con .gereed:hover {
+.f-inner-con .gereed:hover, .f-inner-con .gereed-2:hover {
   color: #F9C600;
 }
 
@@ -761,12 +761,28 @@ g {
 }
 
 .eind-pop-up button {
+  display: block;
   position: absolute;
   right: 30px;
   top: 20px;
   background-color: transparent;
   border: none;
   font-size: 50px;
+  color: black;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: white;
+  border-radius: 10px 10px 10px 0px;
+  color: black;
+  opacity: 0;
+  line-height: 30px;
+  pointer-events: none;
 }
 
 * {
