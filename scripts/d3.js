@@ -75,7 +75,7 @@ function filterFunction(data) {
             .on("mouseover", (e, d) => {
                 d3.select(".tooltip")
                 .html(`
-                    <strong>Koppgheid:</strong> ${d.koppigheid}</br>
+                    <strong>Koppigheid:</strong> ${d.koppigheid}</br>
                     <strong>Deelgedrag:</strong> ${d.deelGedrag}</br>
                     <strong>Schermtijd:</strong> ${d.schermtijd}</br>
                 `)
